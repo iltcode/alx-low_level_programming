@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
- * main - A programe that uses printf() function to print the size of types in c
+ * main - A programe that uses printf() to print the size of types in c
  *
  * Return: 0 (Succese)
  */
