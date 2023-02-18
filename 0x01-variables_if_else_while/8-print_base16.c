@@ -9,7 +9,7 @@ int main(void)
 {
 char ch = 'a';
 int num = 48;
-while (num < 57)
+while (num <= 57)
 {
 	putchar(num);
 	num++;
