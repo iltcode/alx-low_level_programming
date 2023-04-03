@@ -19,7 +19,7 @@ printf("Is empty");
 
 for (nm = 0; h ; nm++)
 {
-printf("%d ", h->n);
+printf("%d\n", h->n);
 h = h->next;
 }
 
