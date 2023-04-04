@@ -19,7 +19,6 @@ printf("%d\n", h->n);
 h = h->next;
 }
 
-printf("\n");
 
 return (nm);
 }
