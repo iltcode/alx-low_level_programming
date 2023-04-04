@@ -12,12 +12,8 @@ size_t listint_len(const listint_t *h)
 
 size_t nm;
 
-if (h == NULL)
-{
-printf("Is empty");
-}
 
-for (nm = 0; h ; nm++)
+for (nm = 0; h != NULL ; nm++)
 {
 h = h->next;
 }

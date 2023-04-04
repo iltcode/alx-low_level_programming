@@ -4,11 +4,10 @@
 #include "lists.h"
 
 /**
- * main - check the code
- *
- * Return: Always 0.
- */
-
+* main - check the code
+*
+* Return: Always 0.
+*/
 int main(void)
 {
 listint_t *head;
@@ -26,7 +25,7 @@ return (1);
 new->n = 9;
 new->next = head;
 head = new;
-n = print_listint(head);
+n = listint_len(head);
 printf("-> %lu elements\n", n);
 free(new);
 return (0);
