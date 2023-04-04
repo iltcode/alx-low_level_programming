@@ -17,8 +17,9 @@ if (h == NULL)
 printf("Is empty");
 }
 
-for (nm = 0; h ; nm++)
+for (nm = 0; h ;)
 {
+	nm++;
 printf("%d\n", h->n);
 h = h->next;
 }
