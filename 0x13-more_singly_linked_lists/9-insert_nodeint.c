@@ -37,11 +37,8 @@ else if (len == idx)
 	p->next = new;
 	return (new);
 }
-else
-{
 	len++;
 	p = p->next;
-}
 }
 
 return (NULL);
