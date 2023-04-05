@@ -26,21 +26,19 @@ del = NULL;
 return (1);
 }
 
-while (del != NULL)
+while (index != len)
 {
-if (index == len || p != NULL)
-{
-	p->next = del->next;
-	free(del);
-	del = NULL;
-	return (1);
+	p = del;
+	del = del->next;
+	len++;
 }
 
-
-p = del;
-del = del->next;
-len++;
-
+if (len == index)
+{
+p->next = del->next;
+free(del);
+del = NULL;
+return (1);
 }
 
 return (-1);
