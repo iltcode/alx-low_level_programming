@@ -28,18 +28,16 @@ return (1);
 
 while (index != len)
 {
+	if (del->next == NULL)
+		return (-1);
 	p = del;
 	del = del->next;
 	len++;
 }
 
-if (len == index)
-{
 p->next = del->next;
 free(del);
 del = NULL;
 return (1);
-}
 
-return (-1);
 }
