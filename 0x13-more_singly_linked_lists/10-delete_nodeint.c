@@ -28,7 +28,7 @@ return (1);
 
 while (index != len)
 {
-	if (del->next == NULL)
+	if (del->next == NULL || del == NULL)
 		return (-1);
 	p = del;
 	del = del->next;
