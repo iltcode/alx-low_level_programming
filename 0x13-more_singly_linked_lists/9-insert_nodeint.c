@@ -16,22 +16,22 @@ listint_t *new;
 listint_t *p = *head;
 
 new = malloc(sizeof(listint_t));
-if (!new || !*head)
+if (!new || !head)
 return (NULL);
 
 new->n = n;
 new->next = NULL;
 
-
-while (p != NULL)
-{
 if (idx == 0)
 {
 new->next = *head;
 *head = new;
 return (new);
 }
-else if (len == idx)
+
+while (p != NULL)
+{
+if (len == idx)
 {
 	new->next = p->next;
 	p->next = new;
