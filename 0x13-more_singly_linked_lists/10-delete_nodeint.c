@@ -26,9 +26,9 @@ del = NULL;
 return (1);
 }
 
-while ((del->next) != NULL || del != NULL)
+while ((del->next) != NULL || del != NULL || p != NULL)
 {
-if (len == index)
+if (index == len)
 {
 	p->next = del->next;
 	free(del);
