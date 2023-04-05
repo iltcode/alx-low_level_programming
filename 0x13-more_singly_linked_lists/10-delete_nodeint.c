@@ -26,7 +26,7 @@ del = NULL;
 return (1);
 }
 
-while ((del->next) != NULL || del != NULL || p != NULL)
+while (del != NULL || p != NULL)
 {
 if (index == len)
 {
