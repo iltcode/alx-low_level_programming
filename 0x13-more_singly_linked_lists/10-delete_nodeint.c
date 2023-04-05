@@ -13,7 +13,7 @@ listint_t *del = *head;
 listint_t *p = *head;
 unsigned int len = 1;
 
-if (!*head)
+if (*head == NULL)
 {
 return (-1);
 }
