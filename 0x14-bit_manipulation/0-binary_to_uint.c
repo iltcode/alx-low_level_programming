@@ -9,9 +9,9 @@
 unsigned int binary_to_uint(const char *b)
 {
 int x;
-unsigned int len = strlen(b);
+int len = strlen(b);
 unsigned int sum = 0;
-unsigned int val = 1;
+int val = 1;
 
 if (b == NULL)
 {
