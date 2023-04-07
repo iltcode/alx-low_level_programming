@@ -27,9 +27,7 @@ sum = sum + val;
 
 }
 
-if (b[x] != '0')
-{
-if (b[x] != '1')
+if (b[x] != '0' && b[x] != '1')
 {
 
 return (0);
