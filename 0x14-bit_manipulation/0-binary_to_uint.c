@@ -26,17 +26,20 @@ if (b[x] == '1')
 sum = sum + val;
 
 }
+val = val * 2;
+}
 
+
+for (x = (len - 1); x >= 0 ; x--)
+{
 if (b[x] != '0' && b[x] != '1')
 {
 
 return (0);
 
 }
-
-val = val * 2;
-
 }
+
 
 return (sum);
 }
