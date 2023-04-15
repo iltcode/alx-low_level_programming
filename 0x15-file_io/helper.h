@@ -1,12 +1,14 @@
-#include "main.h"
+#ifndef _helper_H
+#define _helper_H
 
+#include "main.h"
 
 /**
 * type_printer - Prints the type of an ELF header.
 * @e_type: The ELF type.
 * @e_ident: A pointer to an array containing the ELF class.
 */
-void type_printer(unsigned int e_type, unsigned char *e_ident)
+__tr void type_printer(unsigned int e_type, unsigned char *e_ident)
 {
 if (e_ident[EI_DATA] == ELFDATA2MSB)
 e_type >>= 8;
@@ -40,7 +42,7 @@ printf("<unknown: %x>\n", e_type);
 * abi_printer - Prints the ABI version of an ELF header.
 * @e_ident: A pointer to an array containing the ELF ABI version.
 */
-void abi_printer(unsigned char *e_ident)
+__tr void abi_printer(unsigned char *e_ident)
 {
 printf("  ABI Version:                       %d\n",
 e_ident[EI_ABIVERSION]);
@@ -53,7 +55,7 @@ e_ident[EI_ABIVERSION]);
 * @e_entry: The address of the ELF entry point.
 * @e_ident: A pointer to an array containing the ELF class.
 */
-void entry_printer(unsigned long int e_entry, unsigned char *e_ident)
+__tr void entry_printer(unsigned long int e_entry, unsigned char *e_ident)
 {
 printf("  Entry point address:               ");
 
@@ -78,7 +80,7 @@ printf("%#lx\n", e_entry);
 *
 * Description: If the file cannot be closed - exit code 98.
 */
-void elf_closer(int elf)
+__tr void elf_closer(int elf)
 {
 if (close(elf) == -1)
 {
@@ -87,3 +89,6 @@ dprintf(STDERR_FILENO,
 exit(98);
 }
 }
+
+
+#endif
